@@ -167,7 +167,7 @@ function App() {
     <>
     <div className='flex flex-col justify-center items-center'>
         <div className='-mt-30' >
-          <img src='public/yinyong.png'></img>
+          <img src='/yinyong.png'></img>
         </div>
         <div className='-mt-1 m-5 shadow-lg border-b border-b-white'>
           <h1>
@@ -251,10 +251,10 @@ function App() {
       </div>
       <div className='absolute bottom-0 pointer-events-none w-full -z-10 flex justify-between'>
         <div className='w-full flex justify-start items-end'>
-          <img src='public/p1.png' className='w-100 h-70'></img>
+          <img src='/p1.png' className='w-100 h-70'></img>
         </div>
         <div className='w-full flex justify-end'>
-          <img src='public/p2.png' className='w-100 h-80'></img>
+          <img src='/p2.png' className='w-100 h-80'></img>
         </div>
       </div>
     </div>
