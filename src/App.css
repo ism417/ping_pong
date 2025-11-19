@@ -1,0 +1,94 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Score animation */
+@keyframes scoreUpdate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    color: #3b82f6;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-animate {
+  animation: scoreUpdate 0.3s ease-out;
+}
+
+/* Center line animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.center-line {
+  stroke-dasharray: 10 10;
+  animation: dash 1s linear infinite;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Pause overlay animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.pause-text {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Game arena gradient */
+.game-arena {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 60px rgba(0, 0, 0, 0.5);
+}
